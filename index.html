@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Cafe</title>
+    <style>
+        body { 
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0; 
+        }
+
+        header {
+            background-image: url("bg_img.jpg");
+            height: 100vh;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 4rem;
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+        }
+
+        nav a { 
+            color: #fff; 
+            margin: 0 10px; 
+            text-decoration: none; 
+            font-size: 1.2rem;
+        }
+
+        section { 
+            padding: 2rem; 
+        }
+        h2 { 
+            margin-top: 0; 
+        }
+        #menu {
+            background: linear-gradient(90deg, #f9f9f9, #e0e0e0);
+            padding: 4rem 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+        .menu {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        .menu-item {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            background: white;
+            position: relative;
+        }
+        .menu-item img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-bottom: 2px solid #6c5ce7;
+        }
+        .menu-item h3 {
+            margin: 0;
+            padding: 1rem;
+            font-size: 1.5rem;
+            color: #6c5ce7;
+            background: #f8f8f8;
+        }
+        .menu-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+
+
+        /* Enhanced Reservation Form Styles */
+        #reservation {
+            background: linear-gradient(90deg, #f9f9f9, #e0e0e0);
+            padding: 4rem 2rem;
+        }
+
+        form {
+            max-width: 70%;
+            margin: 0 auto;
+            background: white;
+            padding: 3rem;
+            border-radius: 16px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+        }
+        form input, form textarea, form button { 
+            display: block; 
+            width: calc(100% - 20px); 
+            margin: 10px auto; 
+            padding: 1rem; 
+            border: none;
+            border-radius: 8px;
+            font-size: 1.2rem;
+            box-sizing: border-box;
+        }
+        form input, form textarea {
+            background-color: #f0f0f0;
+            color: #333;
+        }
+        form button {
+            background: #6c5ce7;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+
+        .map { 
+            margin: 2rem 0; 
+        }
+        footer { 
+            background-color: #333; 
+            color: #fff; 
+            text-align: center; 
+            padding: 1rem; 
+        }
+
+        #reservation{
+            background: linear-gradient(90deg, #f9f9f9, #e0e0e0);
+        }
+
+        #location{
+            background: linear-gradient(90deg, #f9f9f9, #e0e0e0);
+        }
+
+        #testimonials {
+            background: linear-gradient(90deg, #f9f9f9, #e0e0e0);
+            padding: 4rem 2rem;
+            overflow: hidden;
+            position: relative;
+        }
+        .testimonial {
+            max-width: 600px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+            transform: scale(1);
+            transition: transform 0.3s;
+        }
+        .testimonial:hover {
+            transform: scale(1.05);
+        }
+        .testimonial p {
+            font-style: italic;
+            color: #333;
+            font-size: 1.2rem;
+        }
+        .testimonial:before {
+            content: "\201C";
+            font-size: 5rem;
+            color: #ddd;
+            position: absolute;
+            top: -10px;
+            left: 10px;
+            z-index: 0;
+        }
+        .customer-name {
+            font-weight: bold;
+            color: #6c5ce7;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#menu">Menu</a>
+            <a href="#reservation">Reservation</a>
+            <a href="#location">Location</a>
+            <a href="#testimonials">Testimonials</a>
+        </nav>
+        <h1>Restaurant Cafe</h1>
+    </header>
+
+    <section id="menu">
+        <h2>Our Menu</h2>
+        <div class="menu">
+            <div class="menu-item">
+                <img src="img1.jpg" alt="Dish">
+                <h3>Dish Name - $10</h3>
+            </div>
+            <div class="menu-item">
+                <img src="img2.jpg" alt="Dish">
+                <h3>Dish Name - $10</h3>
+            </div>
+            <div class="menu-item">
+                <img src="img3.jpg" alt="Dish">
+                <h3>Dish Name - $10</h3>
+            </div>
+            <div class="menu-item">
+                <img src="img4.jpg" alt="Dish">
+                <h3>Dish Name - $10</h3>
+            </div>
+        </div>
+    </section>
+
+    <section id="reservation">
+        <h2>Make a Reservation</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <input type="date" required>
+            <textarea placeholder="Special Requests"></textarea>
+            <button type="submit">Reserve Now</button>
+        </form>
+    </section>
+
+    <section id="location">
+        <h2>Our Location</h2>
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.019339159217!2d-122.41941548468113!3d37.77492927975933!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085808b94ba15ab%3A0x2d362f4ef80d5b6c!2sSan%20Francisco%2C%20CA%2C%20USA!5e0!3m2!1sen!2sin!4v1609463209825!5m2!1sen!2sin" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section>
+
+    <section id="testimonials">
+        <h2>Testimonials</h2>
+        <div class="testimonial">
+            <p>"Amazing flavors and beautiful presentation!"</p>
+            <span class="customer-name">- Customer A</span>
+        </div>
+        <div class="testimonial">
+            <p>"The ambiance is just perfect for a date night."</p>
+            <span class="customer-name">- Customer B</span>
+        </div>
+        <div class="testimonial">
+            <p>"Friendly staff and quick service. Highly recommended!"</p>
+            <span class="customer-name">- Customer C</span>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Restaurant Cafe. All rights reserved.</p>
+    </footer>
+</body>
+</html>
